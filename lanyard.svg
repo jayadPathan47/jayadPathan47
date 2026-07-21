@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Fira+Code:wght@400;700&amp;display=swap');
+
+      @keyframes dropAndSway {
+        0% { transform: translateY(-500px) rotate(15deg); }
+        30% { transform: translateY(0px) rotate(-10deg); }
+        50% { transform: translateY(0px) rotate(6deg); }
+        70% { transform: translateY(0px) rotate(-3deg); }
+        85% { transform: translateY(0px) rotate(1.5deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+      
+      @keyframes idleSway {
+        0%, 100% { transform: rotate(-2.5deg); }
+        50% { transform: rotate(2.5deg); }
+      }
+
+      @keyframes shineSweep {
+        0% { transform: translateX(-350px) translateY(-100px) rotate(30deg); }
+        20%, 100% { transform: translateX(450px) translateY(300px) rotate(30deg); }
+      }
+
+      @keyframes avatarPulse {
+        0%, 100% { filter: drop-shadow(0 0 2px #ff2a85); }
+        50% { filter: drop-shadow(0 0 10px #ff2a85); }
+      }
+
+      .swinging-group {
+        transform-origin: 250px 0px;
+        animation: dropAndSway 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards, idleSway 5s ease-in-out infinite 2.5s;
+      }
+
+      .shine-sweep-bar {
+        animation: shineSweep 4.5s infinite ease-in-out 1s;
+      }
+
+      .avatar-ring {
+        animation: avatarPulse 2.5s infinite ease-in-out;
+      }
+    </style>
+
+    <linearGradient id="strap-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a85" />
+      <stop offset="100%" stop-color="#b5179e" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140a24" />
+      <stop offset="100%" stop-color="#080410" />
+    </linearGradient>
+
+    <linearGradient id="shine-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0)" />
+      <stop offset="50%" stop-color="rgba(255, 255, 255, 0.12)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
+    </linearGradient>
+
+    <clipPath id="card-clip">
+      <rect x="100" y="240" width="300" height="440" rx="18" />
+    </clipPath>
+
+    <clipPath id="avatar-clip">
+      <circle cx="250" cy="370" r="55" />
+    </clipPath>
+  </defs>
+
+  <!-- Swinging Assembly -->
+  <g class="swinging-group">
+    <!-- Strap (hanging from top) -->
+    <path d="M235,0 L235,160 Q235,170 242,175 L247,178 Q250,180 253,178 L258,175 Q265,170 265,160 L265,0" fill="url(#strap-grad)" />
+    <!-- Printed strap text -->
+    <text x="244" y="90" font-family="'Inter', sans-serif" font-weight="800" font-size="7" fill="rgba(255,255,255,0.7)" text-anchor="middle" transform="rotate(-90, 244, 90)">iamgajanan70</text>
+    <text x="256" y="90" font-family="'Inter', sans-serif" font-weight="800" font-size="7" fill="rgba(255,255,255,0.7)" text-anchor="middle" transform="rotate(90, 256, 90)">iamgajanan70</text>
+
+    <!-- Metal Buckle / Ring -->
+    <rect x="238" y="165" width="24" height="28" rx="4" fill="#a1a1aa" stroke="#71717a" stroke-width="2" />
+    <circle cx="250" cy="179" r="12" fill="none" stroke="#a1a1aa" stroke-width="4" />
+    <circle cx="250" cy="204" r="8" fill="none" stroke="#e4e4e7" stroke-width="3" />
+
+    <!-- Badge Card Container (Glassmorphic) -->
+    <g transform="translate(0, 0)">
+      <!-- Main Glass Card -->
+      <rect x="100" y="240" width="300" height="440" rx="18" fill="url(#card-grad)" stroke="rgba(255, 42, 133, 0.25)" stroke-width="2" filter="drop-shadow(0 15px 30px rgba(0,0,0,0.5))" />
+
+      <!-- Strap Slot Hole inside Card top -->
+      <rect x="220" y="252" width="60" height="8" rx="4" fill="#000" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+
+      <!-- Clipped Holographic Sweep and details -->
+      <g clip-path="url(#card-clip)">
+        <!-- Shiny Ambient colors inside card -->
+        <circle cx="120" cy="280" r="80" fill="#ff2a85" opacity="0.12" filter="blur(35px)" />
+        <circle cx="380" cy="620" r="90" fill="#7209b7" opacity="0.15" filter="blur(35px)" />
+
+        <!-- Top logo line -->
+        <text x="130" y="295" font-family="'Inter', sans-serif" font-weight="800" font-size="12" fill="#ff2a85" letter-spacing="1.5">DEV ACCESS</text>
+        <circle cx="360" cy="291" r="5" fill="#27c93f" />
+
+        <!-- Avatar Ring Glowing -->
+        <circle cx="250" cy="370" r="59" fill="none" stroke="url(#strap-grad)" stroke-width="3" class="avatar-ring" />
+        
+        <!-- Avatar Clipped Graphic -->
+        <g clip-path="url(#avatar-clip)">
+          <rect x="190" y="310" width="120" height="120" fill="#1b122e" />
+          <image href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><circle cx='60' cy='60' r='40' fill='%23ff2a85'/><text x='60' y='64' fill='white' font-family='sans-serif' font-size='10' text-anchor='middle' font-weight='bold'>iamgajanan70</text></svg>" 
+                 x="192" y="312" width="116" height="116" preserveAspectRatio="xMidYMid slice" />
+        </g>
+
+        <!-- Name Details -->
+        <text x="250" y="465" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">Gajanan Waichale</text>
+        <text x="250" y="488" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#ff2a85" text-anchor="middle" letter-spacing="1">FULL STACK DEVELOPER</text>
+        <text x="250" y="510" font-family="'Fira Code', monospace" font-size="10.5" fill="#b1a7bc" text-anchor="middle">@iamgajanan70</text>
+
+        <!-- Holographic diagonal sweep line -->
+        <rect x="-100" y="200" width="600" height="140" fill="url(#shine-grad)" class="shine-sweep-bar" />
+
+        <!-- Barcode Block at bottom -->
+        <g transform="translate(150, 540)" fill="#ffffff" opacity="0.8">
+          <rect x="0" y="0" width="3" height="32" />
+          <rect x="5" y="0" width="1.5" height="32" />
+          <rect x="9" y="0" width="4.5" height="32" />
+          <rect x="16" y="0" width="1.5" height="32" />
+          <rect x="20" y="0" width="3" height="32" />
+          <rect x="25" y="0" width="6" height="32" />
+          <rect x="33" y="0" width="1.5" height="32" />
+          <rect x="37" y="0" width="4.5" height="32" />
+          <rect x="44" y="0" width="1.5" height="32" />
+          <rect x="48" y="0" width="6" height="32" />
+          <rect x="56" y="0" width="3" height="32" />
+          <rect x="61" y="0" width="1.5" height="32" />
+          <rect x="65" y="0" width="4.5" height="32" />
+          <rect x="72" y="0" width="1.5" height="32" />
+          <rect x="76" y="0" width="3" height="32" />
+          <rect x="81" y="0" width="6" height="32" />
+          <rect x="89" y="0" width="1.5" height="32" />
+          <rect x="93" y="0" width="4.5" height="32" />
+          <rect x="100" y="0" width="1.5" height="32" />
+        </g>
+        <text x="250" y="588" font-family="'Fira Code', monospace" font-size="8.5" fill="#b1a7bc" text-anchor="middle" letter-spacing="2">01234567890</text>
+
+        <!-- Signature/Tagline on bottom -->
+        <rect x="115" y="605" width="270" height="1" fill="rgba(255, 255, 255, 0.15)"/>
+        <text x="250" y="628" font-family="'Fira Code', monospace" font-style="italic" font-size="10.5" fill="#ff2a85" text-anchor="middle">"I am cursed !"</text>
+      </g>
+    </g>
+  </g>
+</svg>

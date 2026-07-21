@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" width="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Fira+Code:wght@400;700&amp;display=swap');
+      
+      @keyframes cellPopIn {
+        0% { opacity: 0; transform: scale(0.85) translateY(15px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      @keyframes cellShine {
+        0% { transform: translateX(-150px) translateY(-50px) rotate(45deg); }
+        35%, 100% { transform: translateX(250px) translateY(150px) rotate(45deg); }
+      }
+      .shine-sweep-bar {
+        animation: cellShine 6s infinite ease-in-out;
+      }
+    </style>
+
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#12091f" />
+      <stop offset="100%" stop-color="#0a0512" />
+    </radialGradient>
+
+    <linearGradient id="trophy-shine-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0.09)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="240" rx="14" fill="url(#bg-grad)" stroke="rgba(255, 42, 133, 0.2)" stroke-width="1.5"/>
+
+  <!-- Orbs -->
+  <circle cx="250" cy="120" r="90" fill="#7209b7" opacity="0.08" filter="blur(30px)" />
+
+  <g transform="translate(10, 25)">
+    <!-- Header -->
+    <text x="20" y="20" font-family="'Inter', sans-serif" font-weight="800" font-size="16" fill="#ff2a85" letter-spacing="1">PROFILE REPUTATION TROPHIES</text>
+    
+    <!-- Render Cells -->
+    
+      <g class="trophy-cell" style="opacity: 0; animation: cellPopIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; animation-delay: 0.2s;" transform="translate(20, 55)">
+        <!-- Outer Cell Border and Glass Panel -->
+        <rect width="135" height="135" rx="12" fill="rgba(20, 10, 32, 0.55)" stroke="rgba(255, 42, 133, 0.15)" stroke-width="1.5"/>
+        <rect width="135" height="135" rx="12" fill="none" stroke="#ff2a85" stroke-width="1" opacity="0.3"/>
+
+        <!-- Glowing Accent -->
+        <circle cx="67.5" cy="50" r="28" fill="#ff2a85" opacity="0.12" filter="blur(15px)" />
+
+        <!-- Rank Ring Indicator -->
+        <circle cx="67.5" cy="45" r="20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3.5" />
+        <circle cx="67.5" cy="45" r="20" fill="none" stroke="#ff2a85" stroke-width="3.5" stroke-dasharray="125" stroke-dashoffset="35" transform="rotate(-90, 67.5, 45)" />
+        <text x="67.5" y="52" font-family="'Inter', sans-serif" font-weight="900" font-size="15" fill="#ffffff" text-anchor="middle" filter="drop-shadow(0 0 4px #ff2a85)">SS</text>
+
+        <!-- Titles -->
+        <text x="67.5" y="98" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">Slay Master</text>
+        <text x="67.5" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="8.5" fill="#b1a7bc" text-anchor="middle">1.4k+ Commits</text>
+
+        <!-- Holographic Shine overlay inside cell -->
+        <g clip-path="url(#cell-clip-0)">
+          <rect x="-50" y="-10" width="220" height="30" fill="url(#trophy-shine-grad)" class="shine-sweep-bar" style="transform: rotate(45deg); transform-origin: 50px 0px;" />
+        </g>
+        <clipPath id="cell-clip-0">
+          <rect width="135" height="135" rx="12" />
+        </clipPath>
+      </g>
+    
+      <g class="trophy-cell" style="opacity: 0; animation: cellPopIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; animation-delay: 0.4s;" transform="translate(170, 55)">
+        <!-- Outer Cell Border and Glass Panel -->
+        <rect width="135" height="135" rx="12" fill="rgba(20, 10, 32, 0.55)" stroke="rgba(255, 42, 133, 0.15)" stroke-width="1.5"/>
+        <rect width="135" height="135" rx="12" fill="none" stroke="#b5179e" stroke-width="1" opacity="0.3"/>
+
+        <!-- Glowing Accent -->
+        <circle cx="67.5" cy="50" r="28" fill="#b5179e" opacity="0.12" filter="blur(15px)" />
+
+        <!-- Rank Ring Indicator -->
+        <circle cx="67.5" cy="45" r="20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3.5" />
+        <circle cx="67.5" cy="45" r="20" fill="none" stroke="#b5179e" stroke-width="3.5" stroke-dasharray="125" stroke-dashoffset="35" transform="rotate(-90, 67.5, 45)" />
+        <text x="67.5" y="52" font-family="'Inter', sans-serif" font-weight="900" font-size="15" fill="#ffffff" text-anchor="middle" filter="drop-shadow(0 0 4px #b5179e)">S</text>
+
+        <!-- Titles -->
+        <text x="67.5" y="98" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">PR Champion</text>
+        <text x="67.5" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="8.5" fill="#b1a7bc" text-anchor="middle">310+ PRs</text>
+
+        <!-- Holographic Shine overlay inside cell -->
+        <g clip-path="url(#cell-clip-1)">
+          <rect x="-50" y="-10" width="220" height="30" fill="url(#trophy-shine-grad)" class="shine-sweep-bar" style="transform: rotate(45deg); transform-origin: 50px 0px;" />
+        </g>
+        <clipPath id="cell-clip-1">
+          <rect width="135" height="135" rx="12" />
+        </clipPath>
+      </g>
+    
+      <g class="trophy-cell" style="opacity: 0; animation: cellPopIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; animation-delay: 0.6000000000000001s;" transform="translate(320, 55)">
+        <!-- Outer Cell Border and Glass Panel -->
+        <rect width="135" height="135" rx="12" fill="rgba(20, 10, 32, 0.55)" stroke="rgba(255, 42, 133, 0.15)" stroke-width="1.5"/>
+        <rect width="135" height="135" rx="12" fill="none" stroke="#7209b7" stroke-width="1" opacity="0.3"/>
+
+        <!-- Glowing Accent -->
+        <circle cx="67.5" cy="50" r="28" fill="#7209b7" opacity="0.12" filter="blur(15px)" />
+
+        <!-- Rank Ring Indicator -->
+        <circle cx="67.5" cy="45" r="20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3.5" />
+        <circle cx="67.5" cy="45" r="20" fill="none" stroke="#7209b7" stroke-width="3.5" stroke-dasharray="125" stroke-dashoffset="35" transform="rotate(-90, 67.5, 45)" />
+        <text x="67.5" y="52" font-family="'Inter', sans-serif" font-weight="900" font-size="15" fill="#ffffff" text-anchor="middle" filter="drop-shadow(0 0 4px #7209b7)">A</text>
+
+        <!-- Titles -->
+        <text x="67.5" y="98" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">Bug Stalker</text>
+        <text x="67.5" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="8.5" fill="#b1a7bc" text-anchor="middle">80+ Issues Closed</text>
+
+        <!-- Holographic Shine overlay inside cell -->
+        <g clip-path="url(#cell-clip-2)">
+          <rect x="-50" y="-10" width="220" height="30" fill="url(#trophy-shine-grad)" class="shine-sweep-bar" style="transform: rotate(45deg); transform-origin: 50px 0px;" />
+        </g>
+        <clipPath id="cell-clip-2">
+          <rect width="135" height="135" rx="12" />
+        </clipPath>
+      </g>
+    
+  </g>
+</svg>

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" width="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Fira+Code:wght@400;700&amp;display=swap');
+      
+      @keyframes slideInBar {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#12091f" />
+      <stop offset="100%" stop-color="#0a0512" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="240" rx="14" fill="url(#bg-grad)" stroke="rgba(255, 42, 133, 0.2)" stroke-width="1.5"/>
+
+  <!-- Orbs -->
+  <circle cx="440" cy="50" r="45" fill="#7209b7" opacity="0.1" filter="blur(25px)" />
+  <circle cx="60" cy="180" r="50" fill="#ff2a85" opacity="0.12" filter="blur(25px)" />
+
+  <g transform="translate(30, 25)">
+    <!-- Header -->
+    <text x="0" y="20" font-family="'Inter', sans-serif" font-weight="800" font-size="16" fill="#ff2a85" letter-spacing="1">MOST USED LANGUAGES</text>
+    
+    <!-- Rendered Bar Charts -->
+    
+      <g class="lang-row" style="animation: slideInBar 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.1s; opacity: 0;" transform="translate(0, 50)">
+        <!-- Name -->
+        <text x="0" y="15" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff">TypeScript</text>
+        
+        <!-- Track bar -->
+        <rect x="110" y="5" width="230" height="9" rx="4.5" fill="rgba(255, 255, 255, 0.08)"/>
+        
+        <!-- Filled bar with animation -->
+        <rect x="110" y="5" height="9" rx="4.5" fill="#3178c6">
+          <animate attributeName="width" from="0" to="195" dur="1.2s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+        </rect>
+        
+        <!-- Percent text -->
+        <text x="355" y="14" font-family="'Fira Code', monospace" font-size="11" fill="#b1a7bc" font-weight="bold">85%</text>
+      </g>
+    
+      <g class="lang-row" style="animation: slideInBar 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.25s; opacity: 0;" transform="translate(0, 84)">
+        <!-- Name -->
+        <text x="0" y="15" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff">JavaScript</text>
+        
+        <!-- Track bar -->
+        <rect x="110" y="5" width="230" height="9" rx="4.5" fill="rgba(255, 255, 255, 0.08)"/>
+        
+        <!-- Filled bar with animation -->
+        <rect x="110" y="5" height="9" rx="4.5" fill="#f7df1e">
+          <animate attributeName="width" from="0" to="179" dur="1.2s" begin="0.75s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+        </rect>
+        
+        <!-- Percent text -->
+        <text x="355" y="14" font-family="'Fira Code', monospace" font-size="11" fill="#b1a7bc" font-weight="bold">78%</text>
+      </g>
+    
+      <g class="lang-row" style="animation: slideInBar 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.4s; opacity: 0;" transform="translate(0, 118)">
+        <!-- Name -->
+        <text x="0" y="15" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff">Node.js</text>
+        
+        <!-- Track bar -->
+        <rect x="110" y="5" width="230" height="9" rx="4.5" fill="rgba(255, 255, 255, 0.08)"/>
+        
+        <!-- Filled bar with animation -->
+        <rect x="110" y="5" height="9" rx="4.5" fill="#339933">
+          <animate attributeName="width" from="0" to="172" dur="1.2s" begin="0.9s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+        </rect>
+        
+        <!-- Percent text -->
+        <text x="355" y="14" font-family="'Fira Code', monospace" font-size="11" fill="#b1a7bc" font-weight="bold">75%</text>
+      </g>
+    
+      <g class="lang-row" style="animation: slideInBar 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.5499999999999999s; opacity: 0;" transform="translate(0, 152)">
+        <!-- Name -->
+        <text x="0" y="15" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff">Java</text>
+        
+        <!-- Track bar -->
+        <rect x="110" y="5" width="230" height="9" rx="4.5" fill="rgba(255, 255, 255, 0.08)"/>
+        
+        <!-- Filled bar with animation -->
+        <rect x="110" y="5" height="9" rx="4.5" fill="#007396">
+          <animate attributeName="width" from="0" to="156" dur="1.2s" begin="1.0499999999999998s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+        </rect>
+        
+        <!-- Percent text -->
+        <text x="355" y="14" font-family="'Fira Code', monospace" font-size="11" fill="#b1a7bc" font-weight="bold">68%</text>
+      </g>
+    
+      <g class="lang-row" style="animation: slideInBar 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.7s; opacity: 0;" transform="translate(0, 186)">
+        <!-- Name -->
+        <text x="0" y="15" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff">Python</text>
+        
+        <!-- Track bar -->
+        <rect x="110" y="5" width="230" height="9" rx="4.5" fill="rgba(255, 255, 255, 0.08)"/>
+        
+        <!-- Filled bar with animation -->
+        <rect x="110" y="5" height="9" rx="4.5" fill="#3776ab">
+          <animate attributeName="width" from="0" to="138" dur="1.2s" begin="1.2s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+        </rect>
+        
+        <!-- Percent text -->
+        <text x="355" y="14" font-family="'Fira Code', monospace" font-size="11" fill="#b1a7bc" font-weight="bold">60%</text>
+      </g>
+    
+  </g>
+</svg>

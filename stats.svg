@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" width="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Fira+Code:wght@400;700&amp;display=swap');
+      
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-30px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes popIn {
+        0% { opacity: 0; transform: scale(0.6); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+      @keyframes strokeDraw {
+        from { stroke-dashoffset: 283; }
+        to { stroke-dashoffset: 45; } /* 85% score */
+      }
+      .stat-row {
+        opacity: 0;
+        animation: slideIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .rank-ring {
+        opacity: 0;
+        transform-origin: 380px 120px;
+        animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+      }
+      .indicator-circle {
+        stroke-dasharray: 283;
+        stroke-dashoffset: 283;
+        animation: strokeDraw 1.5s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
+      }
+    </style>
+
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#12091f" />
+      <stop offset="100%" stop-color="#0a0512" />
+    </radialGradient>
+
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a85" />
+      <stop offset="100%" stop-color="#b5179e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="240" rx="14" fill="url(#bg-grad)" stroke="rgba(255, 42, 133, 0.2)" stroke-width="1.5"/>
+
+  <!-- Glowing background elements -->
+  <circle cx="380" cy="120" r="60" fill="#ff2a85" opacity="0.12" filter="blur(25px)" />
+  <circle cx="80" cy="60" r="40" fill="#7209b7" opacity="0.1" filter="blur(20px)" />
+
+  <!-- Left Side: Stats List -->
+  <g transform="translate(30, 25)">
+    <!-- Header -->
+    <text x="0" y="20" font-family="'Inter', sans-serif" font-weight="800" font-size="16" fill="#ff2a85" letter-spacing="1">GAJANAN'S STATS</text>
+    
+    <!-- Stat Item 1 -->
+    <g class="stat-row" style="animation-delay: 0.1s" transform="translate(0, 42)">
+      <circle cx="5" cy="12" r="4" fill="#ff2a85" />
+      <text x="20" y="16" font-family="'Inter', sans-serif" font-weight="600" font-size="13" fill="#b1a7bc">Total Commits:</text>
+      <text x="240" y="16" font-family="'Fira Code', monospace" font-weight="700" font-size="14" fill="#ffffff" text-anchor="end">1,432</text>
+    </g>
+
+    <!-- Stat Item 2 -->
+    <g class="stat-row" style="animation-delay: 0.2s" transform="translate(0, 72)">
+      <circle cx="5" cy="12" r="4" fill="#b5179e" />
+      <text x="20" y="16" font-family="'Inter', sans-serif" font-weight="600" font-size="13" fill="#b1a7bc">PRs Merged:</text>
+      <text x="240" y="16" font-family="'Fira Code', monospace" font-weight="700" font-size="14" fill="#ffffff" text-anchor="end">312</text>
+    </g>
+
+    <!-- Stat Item 3 -->
+    <g class="stat-row" style="animation-delay: 0.3s" transform="translate(0, 102)">
+      <circle cx="5" cy="12" r="4" fill="#7209b7" />
+      <text x="20" y="16" font-family="'Inter', sans-serif" font-weight="600" font-size="13" fill="#b1a7bc">Issues Closed:</text>
+      <text x="240" y="16" font-family="'Fira Code', monospace" font-weight="700" font-size="14" fill="#ffffff" text-anchor="end">89</text>
+    </g>
+
+    <!-- Stat Item 4 -->
+    <g class="stat-row" style="animation-delay: 0.4s" transform="translate(0, 132)">
+      <circle cx="5" cy="12" r="4" fill="#27c93f" />
+      <text x="20" y="16" font-family="'Inter', sans-serif" font-weight="600" font-size="13" fill="#b1a7bc">Total Stars:</text>
+      <text x="240" y="16" font-family="'Fira Code', monospace" font-weight="700" font-size="14" fill="#ffffff" text-anchor="end">415</text>
+    </g>
+
+    <!-- Stat Item 5 -->
+    <g class="stat-row" style="animation-delay: 0.5s" transform="translate(0, 162)">
+      <circle cx="5" cy="12" r="4" fill="#ffbd2e" />
+      <text x="20" y="16" font-family="'Inter', sans-serif" font-weight="600" font-size="13" fill="#b1a7bc">Global Rank:</text>
+      <text x="240" y="16" font-family="'Fira Code', monospace" font-weight="700" font-size="14" fill="#ffffff" text-anchor="end">A+</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Rank Ring Visualizer -->
+  <g class="rank-ring" transform="translate(380, 120)">
+    <!-- Base track circle -->
+    <circle cx="0" cy="0" r="45" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="8"/>
+    <!-- Animated fill circle -->
+    <circle cx="0" cy="0" r="45" fill="none" stroke="url(#primary-grad)" stroke-width="8" stroke-linecap="round" class="indicator-circle" transform="rotate(-90)" />
+    
+    <!-- Rank text inside ring -->
+    <text x="0" y="5" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#ffffff" text-anchor="middle" filter="drop-shadow(0 0 5px #ff2a85)">A+</text>
+    <text x="0" y="20" font-family="'Inter', sans-serif" font-weight="600" font-size="8" fill="#b1a7bc" text-anchor="middle" letter-spacing="1">RANK</text>
+  </g>
+</svg>
