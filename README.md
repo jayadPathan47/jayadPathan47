@@ -8,11 +8,11 @@
 
 <p align="center">
   <a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats.herokuapp.com/?user=iamgajanan70&theme=tokyonight&hide_border=true&ring=ff2a85&fire=ff2a85&background=0a0512&stroke=ff2a85" alt="GitHub Streak" /></a>
-  <img src="https://komarev.com/normal-badge.png?id=iamgajanan70&color=ff2a85&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+
 </p>
 
 <p align="center">
-  <img src="lanyard.svg?v=1396" alt="iamgajanan70 Dev Lanyard ID" width="280">
+ 
 </p>
 
 ---
