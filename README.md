@@ -100,7 +100,7 @@
 <h2 align="center">🐍 Continuous Contributions &amp; Daily Snake</h2>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/iamgajanan70/iamgajanan70/output/github-contribution-grid-snake-dark.svg" alt="iamgajanan70 contribution snake animation" width="100%">
+  
 </p>
 
 ---
