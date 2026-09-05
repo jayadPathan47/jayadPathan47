@@ -6,6 +6,12 @@
   </picture>
 </p>
 
+<div>
+  
+![gitartwork](gitartwork.svg)
+
+</div>
+
 <p align="center">
   <a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats.herokuapp.com/?user=iamgajanan70&theme=tokyonight&hide_border=true&ring=ff2a85&fire=ff2a85&background=0a0512&stroke=ff2a85" alt="GitHub Streak" /></a>
 
